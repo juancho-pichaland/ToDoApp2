@@ -1,6 +1,6 @@
 # TODO: Add code here
 class Todo:
-    def _init_(self, code_id: int, title: str, description: str):
+    def __init__(self, code_id: int, title: str, description: str):
         self.code_id = code_id
         self.title = title
         self.description = description
@@ -14,12 +14,12 @@ class Todo:
         if tag not in self.tags:
             self.tags.append(tag)
 
-    def _str_(self):
+    def __str__(self):
         return f"{self.code_id} - {self.title}"
 
 
 class TodoBook:
-    def _init_(self):
+    def __init__(self):
         self.todos: dict[int, Todo] = {}
 
     def add_todo(self, title: str, description: str) -> int:
